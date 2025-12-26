@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* BUTTON STYLES */
+@layer components {
+  .btn {
+    @apply flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:pointer-events-none cursor-pointer;
+  }
+  
+  .btn-md {
+    @apply px-8 py-3.5 font-bold text-base;
+  }
+  
+  .btn-sm {
+    @apply px-6 py-2.5 font-medium text-sm;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 text-white shadow-lg shadow-cyan-500/25 border-0;
+  }
+
+  .btn-secondary {
+    @apply bg-white/5 hover:bg-white/10 border border-white/10 text-white backdrop-blur-sm;
+  }
+}
+
+@theme {
+  --font-sans: "Arial", "Helvetica", "sans-serif";
+}
+
+:root {
+  --background: #0B0F19;
+  --foreground: #ffffff;
+}
+
+* {
+  transition: all .3s ease-in-out;
+}
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+.container {
+  max-width: 1600px;
+}
+
+button {
+  cursor: pointer;
+}
